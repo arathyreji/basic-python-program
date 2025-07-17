@@ -1,0 +1,12 @@
+num = int(input("Enter a number: "))
+count = 0
+temp = num  # Use a temporary variable to avoid changing the original number
+
+if temp == 0:  # Special case for 0
+  count = 1
+else:
+  while temp > 0:
+    temp = temp // 10  # Integer division to remove the last digit
+    count += 1
+
+print(f"The number of digits in {num} is: {count}")
